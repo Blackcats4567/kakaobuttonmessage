@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+	<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('3b5dfa9a81e8e4995342673d34fa85be');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'Blackcats4567 웹사이트에 방문하기!',
+        description: '아래 버튼을 눌러 웹사이트에 방문해보세요!!',
+        imageUrl:
+          'https://search.pstatic.net/sunny/?src=https%3A%2F%2Fyt3.ggpht.com%2Fa%2FAGF-l7_B7I2hD3h2NqTrwEnfQVekxRW4PRma8A4P_Q%3Ds900-c-k-c0xffffffff-no-rj-mo&type=sc960_832',
+        link: {
+          mobileWebUrl: 'https://www.blackcats4567.com',
+          webUrl: 'https://www.blackcats4567.com',
+        },
+      },
+      social: {
+        likeCount: 99999, //99999가 최대입니다
+        commentCount: 99999, //99999가 최대입니다
+        sharedCount: 99999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '지금 바로 접속하기',
+          link: {
+            mobileWebUrl: 'https://www.blackcats4567.com',
+            webUrl: 'https://www.blackcats4567.com',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
